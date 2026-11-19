@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bn1syssdjghqp" path="res://icon.svg" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://buftcbrqudyoe" path="res://player.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://cmd5dcbj4m7dj" path="res://monster.tscn" id="3_feb5d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3c2i"]
 size = Vector2(127.61388, 127.46884)
@@ -9,7 +10,7 @@ size = Vector2(127.61388, 127.46884)
 [node name="Game" type="Node2D" unique_id=963771031]
 
 [node name="Player" parent="." unique_id=390378145 instance=ExtResource("2_e2o6t")]
-position = Vector2(341, 406)
+position = Vector2(336, 413)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=695833029]
 
@@ -22,3 +23,6 @@ texture = ExtResource("1_80nbo")
 position = Vector2(554.5, 632)
 scale = Vector2(5.1796875, 1.8828125)
 shape = SubResource("RectangleShape2D_n3c2i")
+
+[node name="Monster" parent="." unique_id=130918852 instance=ExtResource("3_feb5d")]
+position = Vector2(725, 441)
