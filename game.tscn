@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3c2i"]
 size = Vector2(127.61388, 127.46884)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
+size = Vector2(128, 126)
+
 [node name="Game" type="Node2D" unique_id=963771031]
 
 [node name="Player" parent="." unique_id=390378145 instance=ExtResource("2_e2o6t")]
@@ -26,3 +29,13 @@ shape = SubResource("RectangleShape2D_n3c2i")
 
 [node name="Monster" parent="." unique_id=130918852 instance=ExtResource("3_feb5d")]
 position = Vector2(725, 441)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1572559385]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=678224384]
+position = Vector2(168, 449)
+texture = ExtResource("1_80nbo")
+
+[node name="Wall" type="CollisionShape2D" parent="StaticBody2D2" unique_id=322145304]
+position = Vector2(170, 448)
+shape = SubResource("RectangleShape2D_feb5d")
