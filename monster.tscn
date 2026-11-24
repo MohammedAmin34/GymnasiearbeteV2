@@ -113,7 +113,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Die",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -142,7 +142,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -171,7 +171,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Walk",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [],
 "loop": 1,
@@ -188,7 +188,8 @@ size = Vector2(56, 70)
 position = Vector2(0.9999962, 1)
 scale = Vector2(2.28125, 2.1875)
 sprite_frames = SubResource("SpriteFrames_i34iy")
-animation = &"Idle"
+animation = &"Die"
+frame_progress = 0.5099597
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=935225929]
 position = Vector2(3, 34)
