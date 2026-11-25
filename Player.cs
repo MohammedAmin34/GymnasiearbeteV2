@@ -85,10 +85,12 @@ public partial class Player : CharacterBody2D
 		
 	}
 	private void OnSwordBodyEntered(Node2D body)
-{ 
-	if (body is Monster monster)
-		{GD.Print("Hit monster");
-		}
-	
-}
+	{ 
+		if (body is Monster monster)
+			{
+				GD.Print("Hit monster");
+				monster.TakeDamage(1);
+			}
+	}
+
 }

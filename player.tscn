@@ -317,7 +317,7 @@ shape = SubResource("RectangleShape2D_n3c2i")
 [node name="Area2D" type="Area2D" parent="." unique_id=1473185600]
 
 [node name="swordcollision" type="CollisionShape2D" parent="Area2D" unique_id=563969087]
-position = Vector2(115, 49)
+position = Vector2(108, 49)
 scale = Vector2(2.93, 2.93)
 shape = SubResource("RectangleShape2D_7w65i")
 

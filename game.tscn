@@ -13,7 +13,7 @@ size = Vector2(128, 126)
 [node name="Game" type="Node2D" unique_id=963771031]
 
 [node name="Player" parent="." unique_id=390378145 instance=ExtResource("2_e2o6t")]
-position = Vector2(336, 413)
+position = Vector2(310, 413)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=695833029]
 
@@ -36,6 +36,14 @@ position = Vector2(725, 441)
 position = Vector2(168, 449)
 texture = ExtResource("1_80nbo")
 
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D2" unique_id=1155799176]
+position = Vector2(923, 455)
+texture = ExtResource("1_80nbo")
+
 [node name="Wall" type="CollisionShape2D" parent="StaticBody2D2" unique_id=322145304]
-position = Vector2(170, 448)
+position = Vector2(173, 448)
+shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="Wall2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1054941389]
+position = Vector2(917, 453)
 shape = SubResource("RectangleShape2D_feb5d")

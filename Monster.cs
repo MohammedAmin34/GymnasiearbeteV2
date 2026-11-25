@@ -3,7 +3,7 @@ using System;
 
 public partial class Monster : CharacterBody2D
 {
-	int hp = 3;
+	int hp = 1;
 	private AnimatedSprite2D _animatedSprite;
 	float speed = 150f;
 	[Export]
@@ -40,6 +40,21 @@ public partial class Monster : CharacterBody2D
 		
 		Velocity = mVelocity;
 		MoveAndSlide();
+	}
+
+		public async void TakeDamage(int amount)
+	{
+		hp -= amount;
+		if (hp <= 0)
+		{	
+			SetProcess(false);
+			GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred("disabled", true);
+
+			_animatedSprite.Play("Die");
+			await ToSignal(GetTree().CreateTimer(0.75), SceneTreeTimer.SignalName.Timeout);
+			QueueFree();
+		}
+		
 	}
 	
 }
