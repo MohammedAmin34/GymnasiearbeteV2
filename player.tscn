@@ -296,6 +296,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3c2i"]
 size = Vector2(36, 92)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w65i"]
+size = Vector2(11.945393, 14.215017)
+
 [node name="Player" type="CharacterBody2D" unique_id=390378145]
 script = ExtResource("1_sweqy")
 
@@ -303,8 +306,19 @@ script = ExtResource("1_sweqy")
 texture_filter = 1
 scale = Vector2(2.93, 2.93)
 sprite_frames = SubResource("SpriteFrames_sh265")
-animation = &"Idle"
+animation = &"Attack"
+frame = 4
+frame_progress = 0.9370825
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1012193384]
 position = Vector2(3, 51)
 shape = SubResource("RectangleShape2D_n3c2i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1473185600]
+
+[node name="swordcollision" type="CollisionShape2D" parent="Area2D" unique_id=563969087]
+position = Vector2(115, 49)
+scale = Vector2(2.93, 2.93)
+shape = SubResource("RectangleShape2D_7w65i")
+
+[connection signal="area_entered" from="Area2D" to="." method="OnSwordBodyEntered"]
